@@ -1,0 +1,20 @@
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+  <a [routerLink]="['']">
+    <img src="favicon.ico" id="navbar-favicon">
+  </a>
+
+  <div class="navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item dropdown active" (click)="setDropdown()">
+        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Menu
+        </a>
+        <div class="dropdown-menu {{dropdownClass}}" aria-labelledby="navbarDropdown" >
+          <a class="dropdown-item" [routerLink]="['/person']">Person</a>
+          <a class="dropdown-item" [routerLink]="['/patient']">Patient</a>
+          <a class="dropdown-item" [routerLink]="['/caregiver']" >Caregiver</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
